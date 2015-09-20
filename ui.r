@@ -3,6 +3,7 @@
 #
 
 library(shiny) 
+library(leaflet)
 
 shinyUI(pageWithSidebar(
   

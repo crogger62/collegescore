@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Searching California Colleges</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Searching California Colleges">
+  <meta name="author" content="Craig Lewis">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Searching California Colleges</h1>
+    <h2>Assignment for Developing Data Products course</h2>
+    <p>Craig Lewis<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>College Scorecard Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="doe-logo.jpg" alt="width">
+The United States Department of Education publishes information for secondary (college and universities) higher education institutions. Ostensibly this data is designed to help students and parents make decisions about college selections. In the course of doign this, the Department has collected a wide variety of variables over several years. From the website: </p>
+
+<p><em>The College Scorecard is designed to increase transparency, putting the power in the hands of the public - from those choosing colleges to those improving college quality - to see how well different schools are serving their students.</em></p>
+
+<p>There is also a front-end to the data already developed here: <a href="https://collegescorecard.ed.gov/data/">https://collegescorecard.ed.gov/data/</a></p>
+
+<p>In this projects, a subset of the data is used to search for information on colleges in the state of California. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>More on Scorecard Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The complete College Scorecard dataset is approximately 170.7MB and contains data for 1996-2013. There is a wide variety of information available including data on:</p>
+
+<ul>
+<li>Location</li>
+<li>Test scores of incoming students</li>
+<li>Starting salaries by major for specific degrees granted by the institution</li>
+<li>Specialized attributes for institutions: religious affiliation, single sex institutions, etc. </li>
+</ul>
+
+<p>The website which contains the data used for this project can be found here: <a href="https://collegescorecard.ed.gov/data/">https://collegescorecard.ed.gov/data/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>California Scorecard Search</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>For this assignment, a searchable interface is provided to allow users to search for a subset of California colleges and universities using two sets of searchable parameters: </p>
+
+<ol>
+<li><p>A set of specific attributes for colleges and universities</p>
+
+<ul class = "build incremental">
+<li>Asian American Native American Pacific Islander-serving institution</li>
+<li>Hispanic-serving institution</li>
+<li>Women-only college</li>
+</ul></li>
+<li><p>Admission rates: The upper and lower range for admission  percentages. </p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Sample output</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="appview.png" alt="width"></p>
+
+<p>Limitations: This dataset is very wide (lots of variables) but the data is dirty and cleaning the data greatly reduces the amount of informatoin available for this search. For example, the initial dataset contained 805 colleges/universities. After cleaning the data only 684 colleges remain. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Limitations</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Limitations: This dataset is very wide (lots of variables) but the data is dirty and cleaning the data greatly reduces the amount of informatoin available for this search. For example, the initial dataset contained 805 colleges/universities. After cleaning the data only 684 colleges remain. </p>
+
+<h2>Next Steps</h2>
+
+<p>This search facility can be expanded in several ways: </p>
+
+<ul>
+<li>Additional states and territories (there are 49 more!)</li>
+<li>Include average test scores (ACT/SAT) for incoming students. </li>
+<li>There are still a large number of search attributes that can be accomodated, e.g., religious affiliation. </li>
+<li>Salaries of graduates by major.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='College Scorecard Data'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='More on Scorecard Data'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='California Scorecard Search'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Sample output'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Limitations'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

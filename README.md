@@ -16,6 +16,9 @@ an interface for searching by admission rates and a few special attributes:
 
 Based on this search criteria a map is displayed showing all of the universities that match this criteria. 
 
+** Please note ** - it takes a few seconds for the file to be read and processed and before the map is initially
+rendered. 
+
 The application uses the leaflet library for presenting maps. 
 
 

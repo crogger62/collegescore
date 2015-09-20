@@ -1,4 +1,7 @@
-# lots of libraries
+# 
+#  Server.R
+#
+# Load lots of libraries
 
 library(UsingR)
 library(shiny)
@@ -8,14 +11,15 @@ library(maps)
 library(shiny)
 library(jsonlite)
 
-# Read college data 2013 data
+# Read college data 2013 data - see https://collegescorecard.ed.gov/data/
+# for more information. Note this is one years data: 2013
 CollegeScore<-read.csv("MERGED2013_PP.csv",stringsAsFactors = FALSE)
 
 #
-# Fields we want: 
+# Fields of interest from this data set: 
 #   - State of California
 #   - Latitude and Longitude
-#   - Admission Rate (%) - double
+#   - Admission Rate (%) scaled to 0-100
 #   - Asian American Native American Pacific Islander-serving institution
 #   - Hispanic-serving Institution
 #   - Women-only college
@@ -29,17 +33,15 @@ CompleteCA<-complete.cases(CAUniv)
 CAUniv<-CAUniv[CompleteCA,]
 
 CAUniv$ADM_RATE<-as.double(CAUniv$ADM_RATE)*100
-CAUniv$ADM_RATE==NA
 CAUniv$AANAPII<-CAUniv$AANAPII=="1"
 CAUniv$WOMENONLY<-CAUniv$WOMENONLY=="1"
 CAUniv$HSI <-CAUniv$HSI=="1"
 
+# 
 # Remove incomplete cases
+#
 CompleteCA<-complete.cases(CAUniv)
 CAUniv<-CAUniv[CompleteCA,]
-lower <-0
-upper<-100
-
 
 
 shinyServer(
@@ -48,7 +50,13 @@ shinyServer(
       
       output$map <-renderLeaflet({      
          
-        sCAUniv = CAUniv   
+          # for admission ranges
+          lower <-0
+          upper<-100
+          
+          # We will keep CAUniv as our reference version of the data and filter into the sCAUniv variable
+          
+          sCAUniv = CAUniv   
         
 # filter women only 
         if (input$womenonly)
